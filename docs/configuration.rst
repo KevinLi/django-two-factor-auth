@@ -53,6 +53,10 @@ General Settings
 
   For more QR factories that are available see python-qrcode_.
 
+``TWO_FACTOR_OTP_ISSUER``
+  The name of the issuer shown in the token generator entry. Defaults to
+  the domain name of the server.
+
 ``TWO_FACTOR_TOTP_DIGITS`` (default: ``6``)
   The number of digits to use for TOTP tokens, can be set to 6 or 8. This
   setting will be used for tokens delivered by phone call or text message and

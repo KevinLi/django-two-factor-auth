@@ -503,7 +503,7 @@ class QRGeneratorView(View):
             username = self.request.user.username
 
         otpauth_url = get_otpauth_url(accountname=username,
-                                      issuer=get_current_site(self.request).name,
+                                      issuer=getattr(settings, 'TWO_FACTOR_OTP_ISSUER', get_current_site(self.request).name),
                                       secret=key,
                                       digits=totp_digits())
 

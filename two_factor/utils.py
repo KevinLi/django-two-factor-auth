@@ -33,7 +33,7 @@ def get_otpauth_url(accountname, secret, issuer=None, digits=None):
     accountname = accountname.encode('utf8')
     issuer = issuer.encode('utf8') if issuer else None
 
-    label = quote(b': '.join([issuer, accountname]) if issuer else accountname)
+    label = quote(b':'.join([issuer, accountname]) if issuer else accountname)
 
     # Ensure that the secret parameter is the FIRST parameter of the URI, this
     # allows Microsoft Authenticator to work.
